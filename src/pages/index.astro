@@ -16,7 +16,7 @@ import Outstanding from './outstanding.astro'
 		<!-- Presentation Section -->
 		<section class="py-[50px]">
 			<article class="m-auto w-full max-w-[800px] text-center flex justify-center gap-6">
-				<div>
+				<div class="image-animation">
 					<img class="max-w-[400px] max-h-[600px] rounded-3xl object-fill" src="../../public/images/alvaro-avila-photo.jpg" alt="alvaroavila">
 				</div>
 				<div class="w-full flex items-center">
@@ -131,4 +131,28 @@ import Outstanding from './outstanding.astro'
 		gap: 2rem;
 		padding: 0;
 	}
+
+	.image-animation img{
+		animation-name: image-animation;
+		animation-duration: 7s;
+		animation-direction: alternate-reverse;
+		animation-iteration-count: infinite;
+		animation-timing-function: ease-in-out;
+	}
+	
+	@keyframes image-animation {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-25px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
+
 </style>
