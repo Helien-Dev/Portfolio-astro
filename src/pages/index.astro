@@ -2,6 +2,11 @@
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.astro';
 import Pbold from '../components/Pbold.astro';
+import Projects from './projects.astro';
+import Skills from './Skills.astro';
+import About from './aboutMe.astro';
+import Certificates from './certificates.astro';
+import Outstanding from './outstanding.astro'
 ---
 
 <Layout title="Alvaro Avila dev | Desarrollador">
@@ -10,7 +15,7 @@ import Pbold from '../components/Pbold.astro';
 	<main>
 		<!-- Presentation Section -->
 		<section class="py-[50px]">
-			<article class="m-auto w-full text-center flex justify-center gap-6">
+			<article class="m-auto w-full max-w-[800px] text-center flex justify-center gap-6">
 				<div>
 					<img class="max-w-[400px] max-h-[600px] rounded-3xl object-fill" src="../../public/images/alvaro-avila-photo.jpg" alt="alvaroavila">
 				</div>
@@ -42,6 +47,31 @@ import Pbold from '../components/Pbold.astro';
 					</div>
 				</div>
 			</article>
+
+		<!-- About me Section  -->
+		<section class="w-full m-auto max-w-[1000px] pt-4">
+			<About></About>
+		</section>
+
+		<!-- Outstanding Projects Section -->
+		<section class="w-full m-auto max-w-[1000px]">
+			<Outstanding></Outstanding>
+		</section>
+
+		</section>
+		<!-- Projects Section -->
+		<section class="w-full m-auto max-w-[1000px]">
+			<Projects></Projects>
+		</section>
+
+		<!-- Skills Section -->
+		<section class="w-full m-auto max-w-[1000px]">
+			<Skills></Skills>
+		</section>
+
+		<!-- Certificates Section -->
+		<section class="w-full m-auto max-w-[1000px]">
+			<Certificates></Certificates>
 		</section>
 	</main>
 </Layout>
@@ -50,7 +80,6 @@ import Pbold from '../components/Pbold.astro';
 	main {
 		margin: auto;
 		padding: 1rem;
-		width: 800px;
 		max-width: calc(100% - 2rem);
 		color: white;
 		font-size: 20px;
