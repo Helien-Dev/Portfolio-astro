@@ -1,0 +1,59 @@
+---
+
+---
+
+<article>
+  <h2 class="text-[2rem] font-bold">
+    Proyectos <p class="inline text-blue-600">/></p>
+  </h2>
+  <div class="grid">
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+  </div>
+</article>
+
+<style>
+  .grid {
+    width: 100%;
+    max-width: 1500px;
+    height: 1000px;
+    display: grid;
+    gap: 10px;
+    padding: 1vw;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+        "hero hero hero hero aside2 aside2"
+        "hero hero hero hero aside2 aside2"
+        "hero hero hero hero aside2 aside2"
+        "hero hero hero hero aside2 aside2"
+        "aside3 aside3 aside4 aside4 aside5 aside5 ";
+  }
+
+  .item {
+    border: 2px solid rgb(37 99 235);
+    border-radius: 15px;
+  }
+
+  .grid .item:nth-child(1) {
+    grid-area: hero;
+  }
+  .grid .item:nth-child(2) {
+    grid-area: aside2;
+  }
+
+  .grid .item:nth-child(3) {
+    grid-area: aside3;
+  }
+  .grid .item:nth-child(4) {
+    grid-area: aside4;
+  }
+
+  .grid .item:nth-child(5) {
+    grid-area: aside5;
+  }
+
+</style>
