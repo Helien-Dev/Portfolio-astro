@@ -27,7 +27,6 @@
 	"waitFor": "postCreateCommand",
 
 	"postAttachCommand": {
-		"server": "npm start --host"
 	},
 
 	// Configure tool-specific properties.
