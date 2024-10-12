@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.astro';
 import Pbold from '../components/Pbold.astro';
+import Footer from '../components/Footer.astro';
 import Projects from './projects.astro';
 import About from './aboutMe.astro';
 import Certificates from './certificates.astro';
@@ -64,7 +65,7 @@ import Skills from './skills.astro';
 
 		</section>
 		<!-- Projects Section -->
-		<section class="w-full m-auto max-w-[640px]">
+		<section class="w-full m-auto max-w-[1000px]">
 			<Projects></Projects>
 		</section>
 
@@ -77,6 +78,9 @@ import Skills from './skills.astro';
 		<section class="w-full m-auto max-w-[1000px]">
 			<Certificates></Certificates>
 		</section>
+
+		<!-- Footer Section -->
+		 <Footer></Footer>
 	</main>
 </Layout>
 
