@@ -1,63 +1,40 @@
 ---
-import Github_button from '../components/buttons/Github_button.astro'
-import Web_button from '../components/buttons/Web_button.astro'
-import Daily_button from '../components/buttons/Daily_button.astro'
+import OutstandingCard from '../components/Outstanding_section.astro';
+
+const Ecommerce = {
+    image: "/images/3890438.jpg",
+    imageAlt: "Descripcion de la imagen",
+    title: "Ecommerce",
+    title2nd: "Honey Bun",
+    description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus possimus voluptatum nam aliquam veniam numquam molestiae quisquam, esse porro quidem culpa ipsum maxime! Repellat molestias, impedit voluptate quia fuga saepe!",
+    difficultiesTitle: "Dificultades",
+    difficulties: "difficulties",
+    youtubeLink: "https://www.youtube.com/embed/Pixf6U7x-18?si=npo5GIprTQ75dxi7",
+    githubLink: "https://github.com/",
+    webLink: "https://github.com/",
+    dailyLink: "https://github.com/"
+};
+
+const Drawshare = {
+    image: "/images/person-adding-clothes-cart-closeup-online-shopping-campaign.jpg",
+    imageAlt: "Descripcion de la imagen",
+    title: "Canvas",
+    title2nd: "DrawShare",
+    description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus possimus voluptatum nam aliquam veniam numquam molestiae quisquam, esse porro quidem culpa ipsum maxime! Repellat molestias, impedit voluptate quia fuga saepe!",
+    difficultiesTitle: "Dificultades",
+    difficulties: "difficulties",
+    youtubeLink: "https://www.youtube.com/embed/Pixf6U7x-18?si=npo5GIprTQ75dxi7",
+    githubLink: "https://github.com/",
+    webLink: "https://github.com/",
+    dailyLink: "https://github.com/"
+};
 ---
 
 <article>
     <h2 class="text-[2rem] font-bold">Proyectos destacados <p class="inline text-blue-600">/></p></h2>
-    <div class="bg-[#1c1c1f] p-4 rounded-3xl flex flex-col mt-6 transition ease-in-out delay-75 hover:scale-105">
-        <div class="flex flex-row gap-3 items-center">
-            <div>
-                <img class="max-w-[600px] w-[500px] h-[300px] rounded-3xl" src="/images/3890438.jpg" alt="">
-            </div>
-            <div>
-                <h3 class="text-[1.6rem] font-bold">Ecommerce <p class="inline text-blue-600">|</p> Honey Bun</h3>
-                <p class="text-pretty">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta totam, perferendis, ratione harum quisquam corporis doloribus et voluptas minima quas blanditiis quidem iste. Quod quisquam voluptatum soluta totam fuga recusandae.</p>
-                <hr class="border-blue-600 border-2 rounded-3xl">
-            </div>
-        </div>
-        <div class="mt-6">
-            <h3 class="text-[1.6rem] font-bold">TITLE <p class="inline text-blue-600">/></p></h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus possimus voluptatum nam aliquam veniam numquam molestiae quisquam, esse porro quidem culpa ipsum maxime! Repellat molestias, impedit voluptate quia fuga saepe!</p>
-            <div class="py-5 flex items-center gap-4">
-                <div>
-                    <p>Demo:</p>
-                    <iframe class="rounded-3xl" width="560" height="315" src="https://www.youtube.com/embed/Pixf6U7x-18?si=npo5GIprTQ75dxi7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-                <div>
-                    <Web_button link="https://github.com/" />
-                    <Github_button link="https://github.com/"/>
-                    <Daily_button link="https://github.com/" />
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="bg-[#1c1c1f] p-4 rounded-3xl flex flex-col mt-6 transition ease-in-out delay-75 hover:scale-105">
-        <div class="flex flex-row gap-3 items-center">
-            <div>
-                <img class="max-w-[600px] w-[500px] h-[300px] rounded-3xl" src="/images/person-adding-clothes-cart-closeup-online-shopping-campaign.jpg" alt="">
-            </div>
-            <div>
-                <h3 class="text-[1.6rem] font-bold">Ecommerce <p class="inline text-blue-600">|</p> Honey Bun</h3>
-                <p class="text-pretty">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta totam, perferendis, ratione harum quisquam corporis doloribus et voluptas minima quas blanditiis quidem iste. Quod quisquam voluptatum soluta totam fuga recusandae.</p>
-                <hr class="border-blue-600 border-2 rounded-3xl">
-            </div>
-        </div>
-        <div class="mt-6">
-            <h3 class="text-[1.6rem] font-bold">TITLE <p class="inline text-blue-600">/></p></h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus possimus voluptatum nam aliquam veniam numquam molestiae quisquam, esse porro quidem culpa ipsum maxime! Repellat molestias, impedit voluptate quia fuga saepe!</p>
-            <div class="py-5 flex items-center gap-4">
-                <div>
-                    <p>Demo:</p>
-                    <iframe class="rounded-3xl" width="560" height="315" src="https://www.youtube.com/embed/Pixf6U7x-18?si=npo5GIprTQ75dxi7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-                <div>
-                    <Web_button link="https://github.com/" />
-                    <Github_button link="https://github.com/"/>
-                    <Daily_button link="https://github.com/" />
-                </div>
-            </div>
-        </div>
-    </div>
+
+    <OutstandingCard project={Ecommerce} />
+    <OutstandingCard project={Drawshare} />
+
+
 </article>
