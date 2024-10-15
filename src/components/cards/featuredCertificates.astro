@@ -29,7 +29,7 @@ const image = {
         <img class="w-[600px] max-w-[800px]  h-[400px] rounded-3xl" src={ image.src } alt={ info.alt }  >
     </div>
     <div class="w-full">
-        <h3 class="text-center text-[2rem] font-bold">{ info.entreprise } | { info.title }</h3>
+        <h3 class="text-center text-[2rem] font-bold">{ info.entreprise } <span class="text-blue-600">|</span> { info.title }</h3>
         <p>{ info.description }</p>
         <hr class="border-blue-600 border-2 rounded-3xl">
         <a href={ info.pdfSrc } download={ info.pdfSrc } >Descargar Pdf</a>
