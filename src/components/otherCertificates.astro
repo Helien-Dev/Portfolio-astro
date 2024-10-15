@@ -1,0 +1,23 @@
+---
+interface certificatesComponent {
+    entreprise: string;
+    title: string;
+    description: string;
+    pdfSrc: string;
+
+};
+
+interface certificatesProps {
+    infoCertificate: certificatesComponent;
+}
+
+const { infoCertificate } = Astro.props;
+---
+
+<div class="py-3">
+    <h3 class="text-2xl font-semibold">{ infoCertificate.entreprise } <span class="text-blue-600 font-bold">|</span> { infoCertificate.title }<span class="text-blue-600 font-bold"> /></span></h3>
+    <ul class="px-5">
+        <li><span class="font-bold">•</span> { infoCertificate.description }</li>
+        <a class="text-orange-400 no-underline hover:underline" href={ infoCertificate.pdfSrc }>Descargar pdf</a>
+    </ul>
+</div>

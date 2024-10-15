@@ -1,5 +1,6 @@
 ---
 import CertificatesCard from "../components/cards/featuredCertificates.astro";
+import OthersCertificates from "../components/otherCertificates.astro";
 
 const card = {
     entreprise: "Netzun",
@@ -11,11 +12,18 @@ const card = {
     pdfImage: "/images/certificate-2.png",
     alt: "Certificado Imagen",
 };
+
+const certificate = {
+    entreprise: "Netzun",
+    title: "Power Bi intermedio-Avanzado",
+    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum quae veniam adipisci deleniti, porro fuga. Illum perferendis",
+    pdfSrc: "/pdf/certificate-2.pdf",
+}
 ---
 
 <article>
     <h2 class="font-bold text-[2rem]">
-    Certificados <p class="inline text-blue-600">/></p>
+        Certificados <p class="inline text-blue-600">/></p>
     </h2>
     <articile class="grid gap-5">
         <!-- featured Certificates -->
@@ -23,12 +31,11 @@ const card = {
         <CertificatesCard info={card} />
     </articile>
     <!-- Others Certificates -->
-    <article class="m-auto pt-5 text-center">
-        <div class="py-3">
-            <img
-            class="max-w-[300px] max-h-[300px] rounded-3xl"
-            src="/images/certificate-2.png"
-            alt="" />
-        </div>
-    </article>
+    <article class="m-auto bg-[#1c1c1f] p-5 my-6 rounded-3xl">
+        <OthersCertificates infoCertificate={ certificate }/>
+        <OthersCertificates infoCertificate={ certificate }/>
+        <OthersCertificates infoCertificate={ certificate }/>
+        <OthersCertificates infoCertificate={ certificate }/>
+        <OthersCertificates infoCertificate={ certificate }/>
+    <article>
 </article>
