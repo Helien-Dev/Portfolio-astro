@@ -1,27 +1,34 @@
 ---
-import CertificatesCard from  '../components/cards/featuredCertificates.astro';
+import CertificatesCard from "../components/cards/featuredCertificates.astro";
 
 const card = {
     entreprise: "Netzun",
     title: "Certificado",
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum quae veniam adipisci deleniti, porro fuga. Illum perferendis tempore libero deleniti placeat saepe eligendi quibusdam. Accusantium aliquam suscipit corrupti impedit velit.",
+    description:
+    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum quae veniam adipisci deleniti, porro fuga. Illum perferendis tempore libero deleniti placeat saepe eligendi quibusdam. Accusantium aliquam suscipit corrupti impedit velit.",
     pdfName: "certificate-2.pdf",
     pdfSrc: "/pdf/certificate-2.pdf",
     pdfImage: "/images/certificate-2.png",
-    alt: "Certificado Imagen"
-}
+    alt: "Certificado Imagen",
+};
 ---
 
 <article>
-    <h2 class="font-bold text-[2rem]">Certificados <p class="inline text-blue-600">/></p></h2>
+    <h2 class="font-bold text-[2rem]">
+    Certificados <p class="inline text-blue-600">/></p>
+    </h2>
     <articile class="grid gap-5">
         <!-- featured Certificates -->
-        <CertificatesCard info={ card } />
-        <CertificatesCard info={ card } />
+        <CertificatesCard info={card} />
+        <CertificatesCard info={card} />
     </articile>
+    <!-- Others Certificates -->
     <article class="m-auto pt-5 text-center">
         <div class="py-3">
-            <img class="max-w-[300px] max-h-[300px] rounded-3xl" src="/images/certificate-2.png" alt="">
+            <img
+            class="max-w-[300px] max-h-[300px] rounded-3xl"
+            src="/images/certificate-2.png"
+            alt="" />
         </div>
     </article>
 </article>
