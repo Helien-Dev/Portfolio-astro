@@ -1,0 +1,54 @@
+---
+import type { ImageMetadata } from "astro";
+import { getImage } from "astro:assets";
+
+import Download from "../buttons/DownloadButton.astro";
+
+interface pdfComponents {
+    entreprise: string;
+    title: string;
+    description: string;
+    pdfName: string;
+    pdfSrc: string;
+    pdfImage: string;
+    alt: string;
+}
+
+interface pdfProps {
+    info: pdfComponents;
+}
+
+const { info } = Astro.props;
+const image = {
+    width: 280,
+    height: 400,
+    src: info.pdfImage,
+};
+---
+
+<div class="bg-[#1c1c1f] p-4 rounded-3xl flex justify-center gap-5">
+    <div>
+        <!-- Pdf image -->
+        <img
+        class="w-[600px] max-w-[800px] h-[400px] rounded-3xl"
+        src={image.src}
+        alt={info.alt}
+        />
+    </div>
+    <div class="w-full">
+        <h3 class="text-center text-[2rem] font-bold">
+        {info.entreprise}
+        <span class="text-blue-600">|</span>
+        {info.title}
+        </h3>
+        <p>{info.description}</p>
+        <hr class="border-blue-600 border-2 rounded-3xl" />
+        <Download
+        buttonInfo={{
+            src: info.pdfSrc,
+            title: info.pdfName,
+            downloadItem: info.pdfName,
+        }}
+        />
+    </div>
+</div>

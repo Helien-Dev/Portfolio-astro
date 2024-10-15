@@ -1,0 +1,45 @@
+---
+// Buttons
+import Github_button from '../components/buttons/Github_button.astro';
+import Daily_button from '../components/buttons/Daily_button.astro';
+
+// Get image
+import type { ImageMetadata } from "astro";
+import { getImage } from 'astro:assets';
+
+interface projectComponents {
+    title: string,
+    description: string,
+    image: string | ImageMetadata,
+    imageAlt: string,
+    githubLink: string,
+    dailyLink: string,
+};
+
+interface projectProps {
+    project: projectComponents,
+};
+
+const { project } = Astro.props;
+const imageComponent = await getImage({
+    width: 252,
+    height: 255,
+    src: project.image,
+});
+---
+
+<div class="bg-[#1c1c1f] p-6 rounded-3xl hover:shadow-blue-600 hover:shadow-2">
+    <article class="project-data">
+        <div>
+            <img class="rounded-3xl h-[255px]" src={ imageComponent.src } alt={ project.imageAlt }>
+        </div>
+        <div class="pt-2">
+            <h2>{ project.title }</h2>
+            <p>{ project.description }</p>
+        </div>
+        <div class="flex flex-wrap items-center justify-center gap-2">
+            <Github_button link={project.githubLink } />
+            <Daily_button link={ project.dailyLink } />
+        </div>
+    </article>
+</div>
