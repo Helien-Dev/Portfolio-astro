@@ -7,9 +7,8 @@ import About from './aboutMe.astro';
 import Certificates from './certificates.astro';
 import Outstanding from './outstanding.astro';
 import Skills from './skills.astro';
+import Contact from './contact.astro';
 // Components
-import Navbar from '../components/Navbar.astro';
-import Footer from '../components/Footer.astro';
 import Pbold from '../components/Pbold.astro';
 import Download from '../components/buttons/DownloadButton.astro';
 
@@ -19,10 +18,14 @@ const infoDownload = {
 	title: "Descargar CV",
 	downloadItem: "alvaroavila-cv.pdf"
 };
+
+const seoInfo = {
+	title: "Alvaro Avila Dev | Full-stack Analista de datos",
+	content: "Portafolio web desarollado por Alvaro Avila dev, programador full-stack y analista de datos.",
+}
 ---
 
-<Layout title="Alvaro Avila dev | Desarrollador">
-	<Navbar />
+<Layout seo={ seoInfo } >
 	<main>
 		<!-- Presentation Section -->
 		<section class="py-[50px]">
@@ -65,32 +68,33 @@ const infoDownload = {
 
 		<!-- About me Section  -->
 		<section class="w-full m-auto max-w-[1000px] py-5">
-			<About></About>
+			<About />
 		</section>
 
 		<!-- Outstanding Projects Section -->
 		<section class="w-full m-auto max-w-[1000px]">
-			<Outstanding></Outstanding>
+			<Outstanding />
 		</section>
 
 		</section>
 		<!-- Projects Section -->
 		<section class="w-full m-auto max-w-[1000px]">
-			<Projects></Projects>
+			<Projects />
 		</section>
 
 		<!-- Skills Section -->
 		<section class="w-full m-auto max-w-[1000px]">
-			<Skills></Skills>
+			<Skills />
 		</section>
 
 		<!-- Certificates Section -->
 		<section class="w-full m-auto max-w-[1000px]">
-			<Certificates></Certificates>
+			<Certificates />
 		</section>
-
-		<!-- Footer Section -->
-		<Footer></Footer>
+		<!-- Contact Section -->
+		<section class="w-full m-auto max-w-[1000px]">
+			<Contact />
+		</section>
 	</main>
 </Layout>
 

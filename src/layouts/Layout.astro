@@ -1,9 +1,17 @@
 ---
-interface Props {
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+
+interface layoutProps {
 	title: string;
+	content: string;
 }
 
-const { title } = Astro.props;
+interface layoutComponent {
+	seo: layoutProps;
+}
+
+const { seo } = Astro.props;
 ---
 
 <!doctype html>
@@ -13,12 +21,14 @@ const { title } = Astro.props;
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" href="/developer.png" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
+		<meta name="generator" content={seo.content} />
+		<title>{seo.title}</title>
 	</head>
 	<body>
+		<Navbar />
 		<slot />
 		<script src="../js/main.js"></script>
+		<Footer />
 	</body>
 	</html>
 
@@ -37,16 +47,5 @@ const { title } = Astro.props;
 	html {
 		font-family: 'Onest Variable', sans-serif;
 		background: #13151a;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
 	}
 </style>
