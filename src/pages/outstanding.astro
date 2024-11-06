@@ -29,11 +29,52 @@ const Drawshare = {
     dailyLink: "https://github.com/"
 };
 ---
-
-<article>
-    <h2 class="text-[2rem] font-bold">Proyectos destacados <p class="inline text-blue-600">/></p></h2>
+<article class="featured-projects">
+    <h2 class="heading">Proyectos destacados <span class="text-blue-600">/></span></h2>
 
     <OutstandingCard project={Ecommerce} />
     <OutstandingCard project={Drawshare} />
-
 </article>
+
+<style>
+.featured-projects {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem;
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .heading {
+    font-size: 1.8rem;
+  }
+  .featured-projects {
+    padding: 0.75rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .heading {
+    font-size: 1.6rem;
+  }
+  .featured-projects {
+    padding: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .heading {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+  .featured-projects {
+    padding: 0.5rem;
+  }
+}
+</style>

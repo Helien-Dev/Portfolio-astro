@@ -12,23 +12,109 @@ const card = {
     alt: "Certificado Imagen",
 };
 ---
-
-<article>
-    <h2 class="font-bold text-[2rem]">
-    Certificados <p class="inline text-blue-600">/></p>
+<article class="certificates-section">
+    <h2 class="certificates-title">
+        Certificados <span class="text-blue-600">/></span>
     </h2>
-    <articile class="grid gap-5">
-        <!-- featured Certificates -->
+
+    <div class="certificates-grid">
+        <!-- Featured Certificates -->
         <CertificatesCard info={card} />
         <CertificatesCard info={card} />
-    </articile>
-    <!-- Others Certificates -->
-    <article class="m-auto pt-5 text-center">
-        <div class="py-3">
+    </div>
+
+    <!-- Other Certificates Section -->
+    <div class="other-certificates">
+        <div class="image-container">
             <img
-            class="max-w-[300px] max-h-[300px] rounded-3xl"
-            src="/images/certificate-2.png"
-            alt="" />
+                class="certificate-image"
+                src="/images/certificate-2.png"
+                alt="Certificado adicional"
+            />
         </div>
-    </article>
+    </div>
 </article>
+
+<style>
+/* Estilos principales */
+.certificates-section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 1.5rem;
+    text-align: left;
+}
+
+.certificates-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.other-certificates {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.certificate-image {
+    max-width: 300px;
+    max-height: 300px;
+    border-radius: 1.5rem;
+}
+
+/* Estilos responsivos */
+@media screen and (max-width: 1024px) {
+    .certificates-title {
+        font-size: 1.8rem;
+    }
+    .certificates-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    .certificate-image {
+        max-width: 250px;
+        max-height: 250px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .certificates-title {
+        font-size: 1.6rem;
+    }
+    .certificates-grid {
+        gap: 0.75rem;
+    }
+    .certificate-image {
+        max-width: 200px;
+        max-height: 200px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .certificates-title {
+        font-size: 1.4rem;
+    }
+    .certificates-section {
+        padding: 1rem;
+    }
+    .certificates-grid {
+        gap: 0.5rem;
+    }
+    .certificate-image {
+        max-width: 150px;
+        max-height: 150px;
+    }
+}
+</style>

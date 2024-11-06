@@ -1,24 +1,86 @@
-<footer class="pt-9">
-    <div class="w-full mx-auto p-4 md:py-8">
-        <div class="sm:flex sm:items-center sm:justify-between">
-            <a href="#" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
-                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Alvaro AvilaDev</span>
+<footer class="footer-container">
+    <div class="footer-content">
+        <div class="footer-flex">
+            <a href="#" class="footer-brand">
+                <span class="brand-text">Alvaro AvilaDev</span>
             </a>
-            <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
-                <li>
-                    <a href="#" class="hover:underline me-4 md:me-6">About</a>
-                </li>
-                <li>
-                    <a href="#" class="hover:underline me-4 md:me-6">Privacy Policy</a>
-                </li>
-                <li>
-                    <a href="#" class="hover:underline me-4 md:me-6">Licensing</a>
-                </li>
-                <li>
-                    <a href="#" class="hover:underline">Contact</a>
-                </li>
+            <ul class="footer-links">
+                <li><a href="#" class="footer-link">About</a></li>
+                <li><a href="#" class="footer-link">Privacy Policy</a></li>
+                <li><a href="#" class="footer-link">Licensing</a></li>
+                <li><a href="#" class="footer-link">Contact</a></li>
             </ul>
         </div>
     </div>
 </footer>
 
+<style>
+.footer-container {
+    padding-top: 2.25rem;
+    background-color: #1c1c1f;
+    color: #ffffff;
+}
+
+.footer-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.footer-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.brand-text {
+    color: #ffffff;
+    white-space: nowrap;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    font-size: 0.875rem;
+    color: #d1d5db;
+}
+
+.footer-link {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-link:hover {
+    color: #2563eb; /* Azul al pasar el mouse */
+    text-decoration: underline;
+}
+
+@media screen and (min-width: 640px) {
+    .footer-flex {
+        flex-direction: row;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .footer-links {
+        gap: 1.5rem;
+        font-size: 1rem;
+    }
+    .footer-brand {
+        font-size: 1.75rem;
+    }
+}
+</style>

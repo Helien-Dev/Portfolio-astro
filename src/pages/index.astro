@@ -26,11 +26,11 @@ const infoDownload = {
 	<main>
 		<!-- Presentation Section -->
 		<section class="py-[50px]">
-			<article class="m-auto w-full max-w-[800px] text-center flex justify-center gap-6">
+			<article class="presentation-section">
 				<div class="image-animation">
-					<img class="max-w-[400px] max-h-[600px] rounded-3xl object-fill" src="/images/alvaro-avila-photo.jpg" alt="alvaroavila">
+					<img src="/images/alvaro-avila-photo.jpg" alt="alvaroavila">
 				</div>
-				<div class="w-full flex items-center">
+				<div class="presentation-description">
 					<div>
 						<h1 class="text-center font-semibold whitespace-nowrap">Alvaro Avila<p class="inline text-blue-600">Dev</p></h1>
 						<Pbold>
@@ -47,7 +47,7 @@ const infoDownload = {
 						</article>
 
 						<!-- Social Media -->
-						<div class="flex items-center justify-center gap-[20px]">
+						<div class="social-media">
 							<a class="hover:text-blue-600" href="https://github.com/Helien-Dev"><svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" viewBox="0 0 24 24"><mask id="lineMdGithubLoop0" width="24" height="24" x="0" y="0"><g fill="#fff"><ellipse cx="9.5" cy="9" rx="1.5" ry="1"/><ellipse cx="14.5" cy="9" rx="1.5" ry="1"/></g></mask><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="32" stroke-dashoffset="32" d="M12 4c1.67 0 2.61 0.4 3 0.5c0.53 -0.43 1.94 -1.5 3.5 -1.5c0.34 1 0.29 2.22 0 3c0.75 1 1 2 1 3.5c0 2.19 -0.48 3.58 -1.5 4.5c-1.02 0.92 -2.11 1.37 -3.5 1.5c0.65 0.54 0.5 1.87 0.5 2.5c0 0.73 0 3 0 3M12 4c-1.67 0 -2.61 0.4 -3 0.5c-0.53 -0.43 -1.94 -1.5 -3.5 -1.5c-0.34 1 -0.29 2.22 0 3c-0.75 1 -1 2 -1 3.5c0 2.19 0.48 3.58 1.5 4.5c1.02 0.92 2.11 1.37 3.5 1.5c-0.65 0.54 -0.5 1.87 -0.5 2.5c0 0.73 0 3 0 3"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.7s" values="32;0"/></path><path stroke-dasharray="10" stroke-dashoffset="10" d="M9 19c-1.406 0-2.844-.563-3.688-1.188C4.47 17.188 4.22 16.157 3 15.5"><animate attributeName="d" dur="3s" repeatCount="indefinite" values="M9 19c-1.406 0-2.844-.563-3.688-1.188C4.47 17.188 4.22 16.157 3 15.5;M9 19c-1.406 0-3-.5-4-.5-.532 0-1 0-2-.5;M9 19c-1.406 0-2.844-.563-3.688-1.188C4.47 17.188 4.22 16.157 3 15.5"/><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.8s" dur="0.2s" values="10;0"/></path></g><rect width="8" height="4" x="8" y="11" fill="currentColor" mask="url(#lineMdGithubLoop0)"><animate attributeName="y" dur="10s" keyTimes="0;0.45;0.46;0.54;0.55;1" repeatCount="indefinite" values="11;11;7;7;11;11"/></rect></svg></a>
 
 							<a class="hover:text-blue-600"  href=""><svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" viewBox="0 0 24 24"><circle cx="4" cy="4" r="2" fill="currentColor" fill-opacity="0"><animate fill="freeze" attributeName="fill-opacity" dur="0.15s" values="0;1"/></circle><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"><path stroke-dasharray="12" stroke-dashoffset="12" d="M4 10v10"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.15s" dur="0.2s" values="12;0"/></path><path stroke-dasharray="12" stroke-dashoffset="12" d="M10 10v10"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.45s" dur="0.2s" values="12;0"/></path><path stroke-dasharray="24" stroke-dashoffset="24" d="M10 15c0 -2.76 2.24 -5 5 -5c2.76 0 5 2.24 5 5v5"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.65s" dur="0.2s" values="24;0"/></path></g></svg></a>
@@ -63,54 +63,38 @@ const infoDownload = {
 				</div>
 			</article>
 
-		<!-- About me Section  -->
-		<section class="w-full m-auto max-w-[1000px] py-5">
-			<About></About>
-		</section>
+			<!-- About me Section  -->
+			<section class="w-full m-auto max-w-[1000px] py-5">
+				<About></About>
+			</section>
 
-		<!-- Outstanding Projects Section -->
-		<section class="w-full m-auto max-w-[1000px]">
-			<Outstanding></Outstanding>
-		</section>
+			<!-- Outstanding Projects Section -->
+			<section class="w-full m-auto max-w-[1000px]">
+				<Outstanding></Outstanding>
+			</section>
 
-		</section>
-		<!-- Projects Section -->
-		<section class="w-full m-auto max-w-[1000px]">
-			<Projects></Projects>
-		</section>
+			<!-- Projects Section -->
+			<section class="w-full m-auto max-w-[1000px]">
+				<Projects></Projects>
+			</section>
 
-		<!-- Skills Section -->
-		<section class="w-full m-auto max-w-[1000px]">
-			<Skills></Skills>
-		</section>
+			<!-- Skills Section -->
+			<section class="w-full m-auto max-w-[1000px]">
+				<Skills></Skills>
+			</section>
 
-		<!-- Certificates Section -->
-		<section class="w-full m-auto max-w-[1000px]">
-			<Certificates></Certificates>
-		</section>
-
-		<!-- Footer Section -->
-		<Footer></Footer>
+			<!-- Certificates Section -->
+			<section class="w-full m-auto max-w-[1000px]">
+				<Certificates></Certificates>
+			</section>
 	</main>
+	<!-- Footer Section -->
+	<Footer></Footer>
 </Layout>
 
 <style>
 	main {
-		margin: auto;
-		padding: 1rem;
-		max-width: calc(100% - 2rem);
 		color: white;
-		font-size: 20px;
-		line-height: 1.6;
-	}
-	.astro-a {
-		position: absolute;
-		top: -32px;
-		left: 50%;
-		transform: translatex(-50%);
-		width: 220px;
-		height: auto;
-		z-index: -1;
 	}
 	h1 {
 		font-size: 4rem;
@@ -118,36 +102,36 @@ const infoDownload = {
 		line-height: 1;
 		text-align: center;
 	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
+
+	.presentation-section {
+		margin: auto;
+		width: 100%;
+		max-width: 800px;
+		text-align: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 1.5rem
 	}
-	.instructions {
-		margin-bottom: 2rem;
-		border: 1px solid rgba(var(--accent-light), 25%);
-		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
-		padding: 1.5rem;
-		border-radius: 8px;
+
+	.presentation-description {
+		width: 100%;
+		display: flex;
+		align-items: center;
 	}
-	.instructions code {
-		font-size: 0.8em;
-		font-weight: bold;
-		background: rgba(var(--accent-light), 12%);
-		color: rgb(var(--accent-light));
-		border-radius: 4px;
-		padding: 0.3em 0.4em;
+
+	.social-media {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 20px;
 	}
-	.instructions strong {
-		color: rgb(var(--accent-light));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 2rem;
-		padding: 0;
+
+	.image-animation img {
+		max-width: 400px;
+		max-height: 600px;
+		border-radius: 1.5rem;
+		object-fit: fill;
 	}
 
 	.image-animation img{
@@ -156,6 +140,50 @@ const infoDownload = {
 		animation-direction: alternate-reverse;
 		animation-iteration-count: infinite;
 		animation-timing-function: ease-in-out;
+	}
+
+	@media screen and (max-width: 1024px) {
+	h1 {
+		font-size: 2rem;
+	}
+	.image-animation img {
+		max-width: 300px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 1.75rem;
+  }
+  .presentation-section {
+    flex-direction: column;
+  }
+  .image-animation img {
+    max-width: 250px;
+    max-height: 400px;
+  }
+}
+
+	@media screen and (max-width: 640px) {
+	h1 {
+		font-size: 1.5rem;
+	}
+	.presentation-section {
+		margin: auto;
+		width: 100%;
+		max-width: 100%;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	.presentation-description {
+		padding: 1rem;
+	}
+	.social-media svg {
+		width: 40px;
+		height: 40px;
+	}
 	}
 
 	@keyframes image-animation {

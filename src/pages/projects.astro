@@ -11,15 +11,65 @@ const ejemplo1 = {
 }
 
 ---
-<h2 class="text-[2rem] font-bold">
-  Proyectos <p class="inline text-blue-600">/></p>
+
+<h2 class="projects-title">
+  Proyectos <span class="text-blue-600">/></span>
 </h2>
-<article class="m-auto max-w-[640px]">
-  <div class="grid grid-cols-2 justify-start items-center gap-2 p-4 max-w-[800px]">
+
+<article class="projects-container">
+  <div class="projects-grid">
     <!-- Other Projects -->
-    <ProjectComponent project={ ejemplo1 } />
-    <ProjectComponent project={ ejemplo1 } />
-    <ProjectComponent project={ ejemplo1 } />
-    <ProjectComponent project={ ejemplo1 } />
+    <ProjectComponent project={ejemplo1} />
+    <ProjectComponent project={ejemplo1} />
+    <ProjectComponent project={ejemplo1} />
+    <ProjectComponent project={ejemplo1} />
   </div>
 </article>
+
+<style>
+.projects-title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
+.projects-container {
+  margin: auto;
+  padding: 1rem;
+  max-width: 800px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .projects-title {
+    font-size: 1.8rem;
+  }
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr); /* Mantiene dos columnas */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .projects-title {
+    font-size: 1.6rem;
+  }
+  .projects-grid {
+    grid-template-columns: 1fr; /* Cambia a una columna */
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .projects-title {
+    font-size: 1.4rem;
+  }
+  .projects-container {
+    padding: 0.5rem;
+  }
+}
+</style>
