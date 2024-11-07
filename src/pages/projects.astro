@@ -1,28 +1,33 @@
 ---
 import ProjectComponent from '../components/ProjectComponent.astro';
 
-const ejemplo1 = {
-  title: 'Title',
-  description: 'Description',
-  image: "/images/8767132.jpg",
-  imageAlt: 'alt description',
-  githubLink: 'http://github.com/',
-  dailyLink: 'http://github.com/',
+const pythonOrganizer = {
+  title: 'Python Organizer',
+  description: 'Python Organizer Script | Script diseñado para organizar archivos en una carpeta según sus extensiones. Los archivos se mueven automáticamente a carpetas basadas en su tipo.',
+  image: "/images/Screenshot.png",
+  imageAlt: 'Python Organizer',
+  githubLink: 'https://github.com/Helien-Dev/Python-Organizer.git',
+}
+
+const honeyBunShop = {
+  title: 'Honey Bun Shop - Tienda',
+  description: 'Honey Bun Shop 🍯🐝 – Un ecommerce desarrollado en Python con Django que destaca por su diseño intuitivo y una experiencia de usuario optimizada (UX/UI).',
+  image: "/images/Screenshot-HoneyBun.png",
+  imageAlt: 'Honey Bun Shop - Tienda',
+  githubLink: 'https://github.com/Helien-Dev/Honey-Bun-Django.git',
 }
 
 ---
 
-<h2 class="projects-title">
+<h2 class="projects-title" id="projects">
   Proyectos <span class="text-blue-600">/></span>
 </h2>
 
 <article class="projects-container">
   <div class="projects-grid">
     <!-- Other Projects -->
-    <ProjectComponent project={ejemplo1} />
-    <ProjectComponent project={ejemplo1} />
-    <ProjectComponent project={ejemplo1} />
-    <ProjectComponent project={ejemplo1} />
+    <ProjectComponent project={pythonOrganizer} />
+    <ProjectComponent project={honeyBunShop} />
   </div>
 </article>
 
@@ -32,6 +37,7 @@ const ejemplo1 = {
   font-weight: bold;
   text-align: left;
   margin-bottom: 1.5rem;
+  padding: 1rem;
 }
 
 .projects-container {

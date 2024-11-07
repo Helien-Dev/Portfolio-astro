@@ -6,6 +6,7 @@ import Projects from './projects.astro';
 import About from './aboutMe.astro';
 import Certificates from './certificates.astro';
 import Outstanding from './outstanding.astro';
+import Contact from './contact.astro';
 import Skills from './skills.astro';
 // Components
 import Navbar from '../components/Navbar.astro';
@@ -15,9 +16,9 @@ import Download from '../components/buttons/DownloadButton.astro';
 
 // Props
 const infoDownload = {
-	src: "../assets/alvaroavila-cv.pdf",
+	src: "../public/pdf/Alvaro Avila - Hoja de vida.pdf",
 	title: "Descargar CV",
-	downloadItem: "alvaroavila-cv.pdf"
+	downloadItem: "Alvaro Avila - Hoja de vida.pdf"
 };
 ---
 
@@ -52,7 +53,7 @@ const infoDownload = {
 
 							<a class="hover:text-blue-600"  href=""><svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" viewBox="0 0 24 24"><circle cx="4" cy="4" r="2" fill="currentColor" fill-opacity="0"><animate fill="freeze" attributeName="fill-opacity" dur="0.15s" values="0;1"/></circle><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"><path stroke-dasharray="12" stroke-dashoffset="12" d="M4 10v10"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.15s" dur="0.2s" values="12;0"/></path><path stroke-dasharray="12" stroke-dashoffset="12" d="M10 10v10"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.45s" dur="0.2s" values="12;0"/></path><path stroke-dasharray="24" stroke-dashoffset="24" d="M10 15c0 -2.76 2.24 -5 5 -5c2.76 0 5 2.24 5 5v5"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.65s" dur="0.2s" values="24;0"/></path></g></svg></a>
 
-							<a  class="hover:text-blue-600" href=""><svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" viewBox="0 0 24 24"><mask id="lineMdEmailPlusTwotone0"><g fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="64" stroke-dashoffset="64" d="M4 5h16c0.55 0 1 0.45 1 1v12c0 0.55 -0.45 1 -1 1h-16c-0.55 0 -1 -0.45 -1 -1v-12c0 -0.55 0.45 -1 1 -1Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.6s" values="64;0"/></path><path stroke-dasharray="24" stroke-dashoffset="24" d="M3 6.5l9 5.5l9 -5.5"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.6s" dur="0.2s" values="24;0"/></path><path fill="#fff" fill-opacity="0" stroke="none" d="M12 11l-8 -5h16l-8 5Z"><animate fill="freeze" attributeName="fill-opacity" begin="1.2s" dur="0.15s" values="0;0.3"/></path><path fill="#000" fill-opacity="0" stroke="none" d="M19 13c3.31 0 6 2.69 6 6c0 3.31 -2.69 6 -6 6c-3.31 0 -6 -2.69 -6 -6c0 -3.31 2.69 -6 6 -6Z"><set fill="freeze" attributeName="fill-opacity" begin="0.8s" to="1"/></path><path stroke-dasharray="8" stroke-dashoffset="8" d="M16 19h6"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.8s" dur="0.2s" values="8;0"/></path><path stroke-dasharray="8" stroke-dashoffset="8" d="M19 16v6"><animate fill="freeze" attributeName="stroke-dashoffset" begin="1s" dur="0.2s" values="8;0"/></path></g></mask><rect width="24" height="24" fill="currentColor" mask="url(#lineMdEmailPlusTwotone0)"/></svg></a>
+							<a  class="hover:text-blue-600" href="#contactme"><svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" viewBox="0 0 24 24"><mask id="lineMdEmailPlusTwotone0"><g fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="64" stroke-dashoffset="64" d="M4 5h16c0.55 0 1 0.45 1 1v12c0 0.55 -0.45 1 -1 1h-16c-0.55 0 -1 -0.45 -1 -1v-12c0 -0.55 0.45 -1 1 -1Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.6s" values="64;0"/></path><path stroke-dasharray="24" stroke-dashoffset="24" d="M3 6.5l9 5.5l9 -5.5"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.6s" dur="0.2s" values="24;0"/></path><path fill="#fff" fill-opacity="0" stroke="none" d="M12 11l-8 -5h16l-8 5Z"><animate fill="freeze" attributeName="fill-opacity" begin="1.2s" dur="0.15s" values="0;0.3"/></path><path fill="#000" fill-opacity="0" stroke="none" d="M19 13c3.31 0 6 2.69 6 6c0 3.31 -2.69 6 -6 6c-3.31 0 -6 -2.69 -6 -6c0 -3.31 2.69 -6 6 -6Z"><set fill="freeze" attributeName="fill-opacity" begin="0.8s" to="1"/></path><path stroke-dasharray="8" stroke-dashoffset="8" d="M16 19h6"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.8s" dur="0.2s" values="8;0"/></path><path stroke-dasharray="8" stroke-dashoffset="8" d="M19 16v6"><animate fill="freeze" attributeName="stroke-dashoffset" begin="1s" dur="0.2s" values="8;0"/></path></g></mask><rect width="24" height="24" fill="currentColor" mask="url(#lineMdEmailPlusTwotone0)"/></svg></a>
 						</div>
 
 						<!-- Cv Download Button -->
@@ -69,12 +70,12 @@ const infoDownload = {
 			</section>
 
 			<!-- Outstanding Projects Section -->
-			<section class="w-full m-auto max-w-[1000px]">
+			<!-- <section class="w-full m-auto max-w-[1000px]">
 				<Outstanding></Outstanding>
-			</section>
+			</section> -->
 
 			<!-- Projects Section -->
-			<section class="w-full m-auto max-w-[1000px]">
+			<section class="w-full m-auto max-w-[800px]">
 				<Projects></Projects>
 			</section>
 
@@ -87,6 +88,12 @@ const infoDownload = {
 			<section class="w-full m-auto max-w-[1000px]">
 				<Certificates></Certificates>
 			</section>
+
+			<!-- Contact section -->
+			<section class="w-full m-auto max-w-[1000px]">
+				<Contact />
+			</section>
+
 	</main>
 	<!-- Footer Section -->
 	<Footer></Footer>
